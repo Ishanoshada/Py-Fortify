@@ -1,0 +1,5 @@
+python_minifier
+pyfiglet
+colorama
+tqdm
+requests
