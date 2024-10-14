@@ -357,7 +357,7 @@ def update():
     try:
         # Get the latest version from the version file
         latest_version = requests.get(VERSION_URL).text.strip()
-        print(f"Current version: {CURRENT_VERSION}, Latest version: {latest_version}")
+        #print(f"Current version: {CURRENT_VERSION}, Latest version: {latest_version}")
 
         # Compare versions
         if int(latest_version) > int(CURRENT_VERSION):
@@ -370,7 +370,8 @@ def update():
             print("You can run this again")
             sys.exit(1)
         else:
-            print("You are running the latest version.")
+            pass
+            #print("You are running the latest version.")
     except Exception as e:
         print(f"Error in update: {e}")
 
@@ -444,12 +445,6 @@ def main():
     logo()
     args = parse_args()
     print(bc.OKCYAN)
-    if check_update():
-        print(bc.WARNING+ prinf("[!] update available"))
-        print(bc.OKBLUE + printf("[•] updating..."))
-        update()
-        print(bc.OKBLUE + printf("[•] successfully updated..."))
-        sys.exit(bc.OKCYAN + printf("run the program again"))
     print(random.choice(bcolors) + "\t[•] encoding ".title() + args.input)
     
     with tqdm.tqdm(total=args.complexity, bar_format=colorama.Style.BRIGHT + '{l_bar}' +
@@ -462,7 +457,7 @@ def main():
                    
                    output = m20(file.read())
                    if str(args.exec) == "1":
-                       output = l6(output)
+                       output = l6(output,2)
                    output = l_encoded(output,50)
                   if i == int(int(args.complexity)/2):
                      if str(args.method) == "2":
@@ -489,8 +484,11 @@ def main():
 
 
 if __name__ == "__main__":
-    
-    update()
+
+    try:
+        update()
+    except:
+        pass
     main()
     
 
