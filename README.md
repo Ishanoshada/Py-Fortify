@@ -1,22 +1,24 @@
-<h1 align="center">Welcome to <br>  Py-Fortify</h1>
-<h2 align="center">A Program Which Allows You To Obfuscate Python Programs</h2>
 
-Give a ⭐️ if this project helped you!
-
+<h1 align="center" style="font-size: 3em; color: #4CAF50;">Welcome to <br> 🛡️ Py-Fortify</h1>
+<h2 align="center" style="font-size: 1.5em; color: #333;">A Program That Empowers You to Obfuscate Your Python Programs</h2>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/ishanoshada/Py-Fortify/main/LICENSE" target="_blank">
-    <img alt="License: Apache License 2.0" src="https://img.shields.io/github/license/ishanoshada/Py-Fortify" />
-  </a>
-
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/ishanoshada/Py-Fortify?color=green">
+    <a href="https://raw.githubusercontent.com/ishanoshada/Py-Fortify/main/LICENSE" target="_blank">
+        <img alt="License: Apache License 2.0" src="https://img.shields.io/github/license/ishanoshada/Py-Fortify" />
+    </a>
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/ishanoshada/Py-Fortify?color=green">
+    <a href="https://github.com/ishanoshada/Py-Fortify/stargazers" target="_blank">
+        <img alt="Stargazers" src="https://img.shields.io/github/stars/ishanoshada/Py-Fortify?style=social">
+    </a>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Ishanoshada/Ishanoshada/blob/main/ezgif-2-a761f3164a.gif?raw=true">
+    <img src="https://github.com/Ishanoshada/Ishanoshada/blob/main/ezgif-2-a761f3164a.gif?raw=true" alt="Demo GIF" width="80%">
 </p>
 
-## Install
+---
+
+## 🚀 Installation
 
 ```sh
 sudo apt install git python3
@@ -26,40 +28,47 @@ python3 -m pip install -r requirements.txt
 python3 py_fortify.py
 ```
 
-
-
+## 🛠️ Usage
 
 ```sh
 usage: python py_fortify.py [-h] -i INPUT -o OUTPUT -c COMPLEXITY -m method(1/2)
 ```
 
-
+Example Command:
 ```sh
-usage: python py_fortify.py -i file.py -o out.py -e 1 -m 1 -c 50
+python py_fortify.py -i file.py -o out.py -e 1 -m 1 -c 50
 ```
 
-## Author
+---
 
-👤 **Ishanoshada**
+## 📝 Author
 
-* Github: [@ishanoshada](https://github.com/ishanoshada)
-* Pypi : [@oshada](https://pypi.org/user/oshada/)
+👤 **Ishanoshada**  
+* GitHub: [@ishanoshada](https://github.com/ishanoshada)  
+* PyPI: [@oshada](https://pypi.org/user/oshada/)  
 
+---
 
+## ❤️ Show Your Support
 
-## Show your support
+If this project helped you, please give it a ⭐️!
 
-Give a ⭐️ if this project helped you!
+---
 
-## Tools made from my ideas
-* Py-Fuscate (https://github.com/Sl-Sanda-Ru/Py-Fuscate/)
+## 🛠️ Tools Made From My Ideas
 
-## Stargazers
+- [Py-Fuscate](https://github.com/Sl-Sanda-Ru/Py-Fuscate/) 
 
-[![Stargazers repo roster for @ishanoshada/Py-Fortify](https://reporoster.com/stars/dark/ishanoshada/Py-Fortify)](https://github.com/ishanoshada/Py-Fortify/stargazers)
-[![Forkers repo roster for @ishanoshada/Py-Fortify](https://reporoster.com/forks/dark/ishanoshada/Py-Fortify)](https://github.com/ishanoshada/Py-Fortify/network/members)
+---
 
-## 📝 License
+## 🌟 Stargazers
 
-Copyright © 2023 [Ishan Oshada](https://github.com/ishanoshada).<br />
-This project is [Apache License 2.0](https://raw.githubusercontent.com/ishanoshada/Py-Fortify/main/LICENSE) licensed.
+[![Stargazers repo roster for @ishanoshada/Py-Fortify](https://reporoster.com/stars/dark/ishanoshada/Py-Fortify)](https://github.com/ishanoshada/Py-Fortify/stargazers)  
+[![Forkers repo roster for @ishanoshada/Py-Fortify](https://reporoster.com/forks/dark/ishanoshada/Py-Fortify)](https://github.com/ishanoshada/Py-Fortify/network/members) 
+
+---
+
+## 📜 License
+
+Copyright © 2023 [Ishan Oshada](https://github.com/ishanoshada).  
+This project is licensed under the [Apache License 2.0](https://raw.githubusercontent.com/ishanoshada/Py-Fortify/main/LICENSE).
