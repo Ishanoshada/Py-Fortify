@@ -70,5 +70,5 @@ If this project helped you, please give it a ⭐️!
 
 ## 📜 License
 
-Copyright © 2023 [Ishan Oshada](https://github.com/ishanoshada).  
+Copyright © 2024 [Ishan Oshada](https://github.com/ishanoshada).  
 This project is licensed under the [Apache License 2.0](https://raw.githubusercontent.com/ishanoshada/Py-Fortify/main/LICENSE).
