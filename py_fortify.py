@@ -207,25 +207,7 @@ def m20(code):
         output += f"exec(marshal.loads(gzip.decompress(base64.b64decode({en}))))"
         return output
 
-def ibypass(code):
-        data= python_minifier.minify(code).encode()
-        characters = string.ascii_letters + string.digits + string.punctuation
 
-    
-        pa = ''.join(random.choice(characters) for _ in range(10))
-        en  = base64.b64encode(gzip.compress(marshal.dumps(compile(code,_name_,"exec"))))
-        
-        output = "#https://github.com/Ishanoshada/Py-Fortify\n"
-        output += f"#ENCODED BY {_name_} \n#you can try this decode\n"
-        output += """import sys,os
-if sys.flags.interactive:
-        print(' ERROR FOR TYPE VERSION ! ');sys.exit();exit();os.system("python")
-if "-i" in sys.argv:
-    print(' ERROR FOR TYPE VERSION ! ');sys.exit();exit();os.system("python")
-        \n"""
-        output += "import marshal,base64,gzip,zlib,bz2,lzma\n"
-        output += f"exec(marshal.loads(gzip.decompress(base64.b64decode({en}))))"
-        return output
 
 def l1(data,line):
      output = "import marshal,base64,lzma,gzip,zlib,binascii\n"
@@ -359,27 +341,38 @@ colorama.init(autoreset=True)
 def printf(text):
     return text.title().center(os.get_terminal_size().columns)
 
+# Initialize current version
+CURRENT_VERSION = "2"  # Update this to your current version
 
-def check_update():
-    LATEST_VER = requests.get(
-        "https://raw.githubusercontent.com/ishanoshada/Py-Fortify/main/.version"
-    ).text.strip()
-    with open(".version") as version:
-        return True if float(version.read().strip()) < float(LATEST_VER) else False
+# URL for the version file
+VERSION_URL = "https://raw.githubusercontent.com/Ishanoshada/Py-Fortify/master/.version"
+# URL for the main script file
+SCRIPT_URL = "https://raw.githubusercontent.com/Ishanoshada/Py-Fortify/master/py_fortify.py"
+
+
 
 
 def update():
-    if ".git" in os.listdir():
-        _ = subprocess.run(["git", "stash"], check=True)
-        _ = subprocess.run(["git", "pull"], check=True)
-    else:
-        latest_source = requests.get(
-            "https://raw.githubusercontent.com/ishanoshada/Py-Fortify/main/py_fortify.py"
-        ).content
-        with open("py_fortify.py", "wb") as file:
-            file.write(latest_source)
-        with open(".version", "w") as file:
-            file.write(LATEST_VER)
+    """Checks for updates and updates the script if a new version is available."""
+    try:
+        # Get the latest version from the version file
+        latest_version = requests.get(VERSION_URL).text.strip()
+        print(f"Current version: {CURRENT_VERSION}, Latest version: {latest_version}")
+
+        # Compare versions
+        if int(latest_version) > int(CURRENT_VERSION):
+            print("A new version is available. Updating...")
+            # Download the latest script
+            r = requests.get(SCRIPT_URL)
+            with open('py_fortify.py', 'wb') as f:
+                f.write(r.content)
+            print("Updated successfully to version " + latest_version)
+            print("You can run this again")
+            sys.exit(1)
+        else:
+            print("You are running the latest version.")
+    except Exception as e:
+        print(f"Error in update: {e}")
 
 def logo():
     font = random.choice(FONTS)
@@ -469,7 +462,7 @@ def main():
                    
                    output = m20(file.read())
                    if str(args.exec) == "1":
-                       output = ibypass(output)
+                       output = l6(output)
                    output = l_encoded(output,50)
                   if i == int(int(args.complexity)/2):
                      if str(args.method) == "2":
@@ -496,6 +489,7 @@ def main():
 
 
 if __name__ == "__main__":
+    update()
     main()
     
 
